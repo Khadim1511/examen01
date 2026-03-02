@@ -29,15 +29,15 @@ public class TestExam {
         cal.add(Calendar.YEAR, 1);
         Date nextYear = cal.getTime();
 
-        Contrat con1 = new Contrat(today, nextYear, "Actif", c1, a1);
+       Contrat con1 = new Contrat(today, nextYear, "Actif", c1, a1);
         cos.create(con1);
 
 
-        System.out.println("Assurance par type: " + as.findByType("Auto1"));
+     System.out.println("Assurance par type: " + as.findByType("Auto1"));
 
-        System.out.println("Contrats du client CIN001: " + cs.findContratsByClientCin(" ").size());
+       System.out.println("Contrats du client CIN001: " + cs.findContratsByClientCin(" ").size());
 
-        System.out.println("Contrats pour assurance Auto1: " + as.findContratsByAssuranceType("Auto1").size());
+       System.out.println("Contrats pour assurance Auto1: " + as.findContratsByAssuranceType("Auto1").size());
 
         System.out.println("Contrats actifs après aujourd'hui: " + cos.findActiveAfterDate(today).size());
     }
